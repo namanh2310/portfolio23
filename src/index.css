@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --color-bg: #1f1f38;
+  --color-primary: #2c2c6c;
+  --color-variant: #18183b;
+  --color-secondary: #4db5ff;
+  --color-sub-variant: #4db5ff3d;
+  --color-light: rgba(255, 255, 255, 0.733);
+  --lg: 75%;
+  --md: 86%;
+  --ms: 90%;
+  --transition: all 400ms ease;
+  --fadein: FadeIn ease 0.8s;
+  --shape: Shape ease 0.4s;
+  --color: Color ease-in-out 2s infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--color-bg);
+  color: white;
+  line-height: 1.7;
+}
+
+/* ===================================== */
+
+.container {
+  width: var(--lg);
+  margin: auto;
+}
+
+section {
+  min-height: 100vh;
+  margin-top: 4rem;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  transform: translateY(-8%); */
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--color-secondary);
+}
+
+
+
+h5 {
+  color: var(--color-light);
+  font-weight: 100;
+}
+
+.text-light {
+  color: var(--color-light);
+  font-weight: 100;
+}
+
+.small {
+  font-size: smaller;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+section > h2, section > h5 {
+  text-align: center;
+  color: white;
+}
+
+section > h2 {
+  color: var(--color-secondary);
+  margin-bottom: 3rem;
+}
+
+a {
+  color: var(--color-secondary);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: white;
+}
+
+.btn {
+  width: max-content;
+  display: inline-block;
+  color: var(--color-secondary);
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid var(--color-secondary);
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background: white;
+  color: var(--color-bg);
+  border-color: transparent;
+}
+
+.btn-primary {
+  background: var(--color-secondary);
+  color: var(--color-bg);
+  font-weight: 600;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ========================= Animation ========================== */
+
+@keyframes Shape {
+  from {
+      transform: scaleX(0);
+  }
+  to {
+      transform: scaleX(1);
+
+  }
+}
+
+@keyframes FadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+
+  }
+}
+
+@keyframes Color {
+  from {
+    background: var(--color-variant);
+  }
+  to {
+    background: var(--color-sub-variant);;
+
+  }
+}
+
+
+/* ========================= MEDIA (MEDIUM) ========================== */
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--md);
+  }
+
+  section {
+    height: auto;
+    margin-top: 6rem;
+  }
+}
+
+/* ========================= MEDIA (SMALL) ========================== */
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--ms);
+  }
+
+   section {
+    height: auto;
+    margin-top: 6rem;
+  }
+
+  section > h2 {
+    margin-bottom: 2rem;
+  }
+}
